@@ -1,0 +1,21 @@
+{
+  "name": "template",
+  "homepage": "j-roel",
+  "authors": [
+    "Jeremy Roelfs <jeremyroelfs@icloud.com>"
+  ],
+  "description": "base template for AngularJS",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap-colorpicker": "~3.0.23"
+  }
+}
