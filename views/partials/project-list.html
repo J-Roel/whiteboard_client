@@ -1,0 +1,29 @@
+<div class="project-panel">
+	<img src="" alt="#">
+
+	<div class="row">
+
+		<div class="col-md-8">
+			<h4> {{ item.name }} </h4>
+			<p> {{ item.date | date : shortTime : 'UTC' }} </p>
+		</div>
+		<div class="col-md-4">
+			<button class="btn btn-warning" ng-click="loadProject(item.id)">Edit</button>
+		</div>
+	</div>
+
+	<div ng-repeat="story in item.story track by $index">
+	<button class="btn btn-danger" ng-click="removeStory(item.id, $index)">X</button> {{story.name}}
+	</div>
+
+	<hr/>
+
+	
+	<form class="form-inline">
+
+		<input class="form-control stretch" type="text" ng-model="story" placeholder="Add A Story">
+		<button class="btn btn-primary" ng-click="addStory(item.id, story); story='';">+</button>
+	
+	</form>
+	<button class="btn btn-warning" ng-click="removeProject(item.id)">Remove Project</button>
+</div>

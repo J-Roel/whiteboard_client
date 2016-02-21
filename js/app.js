@@ -2,4 +2,4 @@
 //var Firebase = require("firebase");
 
 //Initialize our app
-angular.module("myApp", ['ngRoute', 'colorpicker.module', 'ngAnimate']);
+angular.module("whiteBoardApp", ['ngRoute']);

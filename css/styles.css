@@ -5,18 +5,105 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
-/* ============= STRUCTURE =============== */
 
-.a-list{
-	display: inline-block;
-	width: 21em;
+/* -- TYPOGRAPHY -- */
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+#main-logo {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 2em;
+}
+
+/* ============= STRUCTURE =============== */
+.new-project {
+	width: 20em;
 	vertical-align: top;
-	border: 4px solid #0cbeff;
+	border: 1px solid #ccc;
 	margin: 10px;
 	padding: 10px;
-	border-radius: 0.5em;
-	background-color: #009bd3;
+	border-radius: 0.2em;
+	background-color: #eee;
+	transition: all 1s;
+}
+project-panel{
+	float:left;
+}
+
+.project-panel{
+	display: inline-block;
+	width: 28em;
+	height: 32em;
+	margin: 2em;
+	border-bottom-left-radius: 0.2em;
+	border-bottom-right-radius: 0.2em;
+	box-shadow: 0.1px 0.1px 7px 0.2px #444;
+	transition: all 1s;
+}
+
+
+.go {
+	border: 2px solid: #444;
+	background-color: #ccc;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+.project-panel .text {
+	width: 100%;
+	background-color: #fff;
+	padding: 2em;
+}
+.project-panel img{
+	padding: 0;
+	margin: 0;
+	width: 28em;
+	height: 20em;
+}
+.project-panel:hover{
+	box-shadow: 0.3px 0.3px 15px 0.5px #444;
 }
 .rowEl {
 	display: inline-block;
 }
+
+
+.user-pic-sml{
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	padding:0;
+	overflow: hidden;
+	margin: 0.5em;
+}
+
+.user-pic-lg{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	padding:0;
+	overflow: hidden;
+	margin: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END OF FILE */

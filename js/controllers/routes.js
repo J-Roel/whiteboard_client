@@ -1,4 +1,4 @@
-var app = angular.module("myApp");
+var app = angular.module("whiteBoardApp");
 
 
 
@@ -6,6 +6,10 @@ app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
-        controller: 'HomeController as HC',
+        controller: 'ProjectsController as PC',
+      })
+      .when('/project-room', {
+      	templateUrl: 'views/project-room.html',
+      	controller: 'ProjectsController as PC'
       })
 });

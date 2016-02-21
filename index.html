@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="whiteBoardApp">
 <head>
 	<title>Template</title>
-	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-bootstrap-colorpicker/css/colorpicker.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
 </head>
 
 
 
-<body ng-cloak> 
+<body ng-cloak>
 <div ng-controller="AppController as AppC">
 	<div ng-view></div>
 </div>
 
 
 
-
-<!-- LOAD ALL SCRIPTS -->
+	<!-- LOAD ALL SCRIPTS -->
 	<script type="text/javascript" src="js/lib/jquery-2.2.0.min.js"></script>
 	<script src="css/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+
 
 	<!-- Load AngularJS -->
 	<script src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	
+
+
 	<!--AngularJS Dependencies -->
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
@@ -37,11 +41,14 @@
 	<script type="text/javascript" src="js/controllers/filters.js"></script>
 	<script type="text/javascript" src="js/controllers/routes.js"></script>
 	<script type="text/javascript" src="js/controllers/ourApp.controller.js"></script>
-	<script type="text/javascript" src="js/controllers/home.controller.js"></script>
-	<script type="text/javascript" src="js/controllers/todo.directive.js"></script>
+	<script type="text/javascript" src="js/controllers/projects.controller.js"></script>
+	<script type="text/javascript" src="js/controllers/projects.service.js"></script>
+	<script type="text/javascript" src="js/controllers/users.service.js"></script>
+
+
+	<!-- Other Scripts -->
+	<script type="text/javascript" src="js/lib/smooth-scroll.js"></script>
 	
-	<!-- My Scripts -->
-	<script type="text/javascript" src="js/objects.js"></script>
 
 
 </body>

@@ -1,7 +1,33 @@
+<custom-header></custom-header>
 
 
-<section class="container">
+<div class="container">
+	<section class="new-project">
+	<form class="form-inline">
+		<input class="form-control stretch" type="text" ng-model="newName" placeholder="Create New Project">
+		<button class="btn btn-primary" ng-click="PC.addProject(newName); newName='';">Create</button>
+	</form>
+	</section>
+</div>
+<hr/>
 
-      <jr-list></jr-list>
+<section>
+	<div ng-repeat='project in PC.projects' >
+		<project-panel>
+		<div class="project-panel" ng-click="PC.loadProject(project.filename)" >
+			<img src="{{ project.image }}" alt="#">
+			
+			<div class="text">
+				<h4>{{ project.name }}</h4>
+				<p>{{ project.date | date : shortTime : 'UTC' }}</p>	
+				<hr/>
+	
+				<div ng-repeat="user in project.users | limitTo:5 track by $index">
+					<h5>Scrum Master: {{ project.scrum_master}}
+				</div>
+			</div>
+		</div>
+		<project-panel>
 
+	</div>
 </section>
