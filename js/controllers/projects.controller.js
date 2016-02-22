@@ -9,43 +9,57 @@ app.controller('ProjectsController', ['$scope', '$routeParams', '$location', 'Pr
 		vm.curProject = [];
 
 		console.log("vm.projects: ", vm.projects);
-		//if (vm.projects == [])
-		//{
+		
+
 			console.log("getting manifest");
 			//Need to get our local projects initially
-			ProjectsService.getData('project-manifest.json').then(function(response){
+			ProjectsService.getData('manifest.json').then(function(response){
 				if(response){
+					console.log("---: ", response.data.projects);
 					vm.projects = response.data.projects;
-					console.log("projects: ", response.data.projects);
-
-					vm.projects.forEach(function(project, index){
-							if(project.image === '')
-							{
-								project.image === '../media/placeholder/ph-1.png';
-							}
+					vm.projects.forEach(function(project){
+						console.log("project: ", project);
 					});
+
 
 				} else {
 					console.error("Did not recieve any data.");
 				}
 			});
-		//}
 
 
 		//CRUD FUNCTIONALITY OF OUR LOCAL PROJECTS
 		vm.addProject = function(projectName) {
 			console.log("Adding Project: ", projectName);
-			var newprojectNum = vm.projects.length + 1;
-            var myDate = Date.now();
-            var newproject = {
-                id: newprojectNum,
-                name: projectName,
-                date: myDate,
-                story: [],
-                users: []
-            }
-            vm.projects.push(newproject);
-            console.log(vm.projects);
+			if(projectName)
+			{
+				fileName = projectName.toLowerCase().split(" ").join("-");
+				folderName = fileName;
+				console.log("folderName: ", folderName);
+				fileName = fileName + ".json";
+				console.log("fileName: ", fileName)
+
+				var newprojectNum = vm.projects.length + 1;
+
+
+	            var myDate = Date.now();
+	            var newproject = {
+	                id: newprojectNum,    
+					"name" : "Test Project",
+					"filename" : "test-project/test-project.json",
+					"date" : "Feb 20, 2016",
+					"id" : 1,
+					"image" : "../media/projects/test-project.jpg",
+					"scrum_master" : "John Doe",
+					"project_owner" : "Sampson the Dog",
+					"team" : ["Cat in the Hat, Fish, Zebra"],
+					"client_company" : "Really Big Company, Co.",
+					"users" : [1,2,3,4,5]
+				};
+
+	            vm.projects.push(newproject);
+	            console.log(vm.projects);
+	        }
 
 		};
 		vm.removeProject = function(projectId){

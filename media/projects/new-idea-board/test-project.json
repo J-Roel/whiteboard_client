@@ -1,24 +1,24 @@
 {
 "project" : [
 	{
-		"id": 1,
-        "name": "Test Project",
+		"id": 2,
+        "name": "New Idea Board",
         "date": "2/20/2016",
         "users": [ 
                 {
-                        "id" : 1,
+                        "id" : 2,
                         "role": "Scrum Master"
                 },
                 {
-                        "id" : 2,
+                        "id" : 1,
                         "role": "Project Owner"
                 },
                 {
-                        "id" : 3,
+                        "id" : 8,
                         "role": "Team"
                 },
                 {
-                        "id" : 4,
+                        "id" : 11,
                         "role": "Team"
                 },
                 {
@@ -33,11 +33,11 @@
         ],
          "story": [
                 {
-                        "name" : "User Sees Hellow World",
+                        "name" : "Find a new concept",
                         "status" : ""
                 },
                 {
-                        "name" : "The Font is Really Big",
+                        "name" : "Hello World",
                         "status" : ""
                 }
         ],

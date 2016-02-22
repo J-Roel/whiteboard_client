@@ -1,0 +1,30 @@
+{
+"projects" : [
+
+	{
+		"id" : 1,
+		"name" : "Test Project",
+		"filename" : "test-project/test-project.json",
+		"date" : "Feb 20, 2016",
+		"image" : "../media/projects/test-project.jpg",
+		"scrum_master" : "John Doe",
+		"project_owner" : "Sampson the Dog",
+		"team" : ["Cat in the Hat, Fish, Zebra"],
+		"client_company" : "Really Big Company, Co.",
+		"users" : [1,2,3,4,5]
+	},
+	{
+		"id" : 2,
+		"name" : "New Idea Board",
+		"filename" : "new-idea-board/new-idea-board.json",
+		"date" : "Feb 21, 2016",
+		"image" : "../media/projects/test-project.jpg",
+		"scrum_master" : "John Doe",
+		"project_owner" : "Sampson the Dog",
+		"team" : ["Cat in the Hat, Fish, Zebra"],
+		"client_company" : "Really Big Company, Co.",
+		"users" : [1,2,3,4,5]
+	}
+
+]
+}

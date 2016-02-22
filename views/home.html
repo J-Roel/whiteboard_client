@@ -21,9 +21,14 @@
 				<h4>{{ project.name }}</h4>
 				<p>{{ project.date | date : shortTime : 'UTC' }}</p>	
 				<hr/>
-	
-				<div ng-repeat="user in project.users | limitTo:5 track by $index">
-					<h5>Scrum Master: {{ project.scrum_master}}
+				<h5>Scrum Master: {{ project.scrum_master }}</h5>
+				<h5>Project Owner: {{ project.project_owner }}</h5>
+				<h5>Team:
+					<span ng-repeat='team_member in project.team'>
+						{{ team_member }}
+					</span>
+				</h5>
+				<h5>Client: {{ project.client_company}}</h5>
 				</div>
 			</div>
 		</div>
